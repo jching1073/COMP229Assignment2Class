@@ -8,7 +8,7 @@ Date: June 4, 2021
  * Module dependencies.
  */
 import createError from 'http-errors';
-import app from './app';
+import app from './Server/Config/app';
 import debug from 'debug';
 debug('comp229assignment1a:server');
 import http from 'http';
