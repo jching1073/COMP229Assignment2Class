@@ -1,0 +1,54 @@
+/*
+File Name app.css
+By: Jerome Ching
+Student# 300817930
+Date: June 4, 2021
+*/
+
+/*CSS Goes here*/
+.center {
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+  }
+  .centerIMG {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  .centerIMG1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+  }
+  .graybackground {
+    background-color: lightgray;
+  }
+  .paragraphindent{
+      text-indent: 27px;
+  }
+  .rightimg {
+      float: right;
+    width: 300px;
+    height: auto;
+    padding: 0 10px 0 0;
+  }
+
+  .rightFloat {
+    float: right;
+  width: 400px;
+  height: auto;
+  padding: 20px 10px 0 0;
+}
+.leftFloat {
+    float: left;
+  width: 380px;
+  height: auto;
+  padding: 20px 10px 0 0;
+}
+.blockDiv{
+    display: block;
+
+}
