@@ -24,4 +24,7 @@ router.get('/services', function (req, res, next) {
 router.get('/contact', function (req, res, next) {
     res.render('contactus', { title: "Contact Us", page: 'contact' });
 });
+router.get('/signin', function (req, res, next) {
+    res.render('index', { title: "Sign In", page: "signin" });
+});
 //# sourceMappingURL=index.js.map
