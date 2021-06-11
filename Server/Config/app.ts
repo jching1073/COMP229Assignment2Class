@@ -12,6 +12,8 @@ import logger from 'morgan';
 import mongoose from 'mongoose';
 
 import indexRouter from '../Routes/index';
+import clothingRouter from '../Routes/clothing';
+import contactRouter from '../Routes/contact'
 
 //App Config
 const app = express();
@@ -20,6 +22,7 @@ export default app; //app will be the default
 //DB Config
 import * as DBConfig from "./db";
 mongoose.connect(DBConfig.LocalURI, {useNewUrlParser: true, useUnifiedTopology: true});
+
 
 const db = mongoose.connection; //hey mongoose connect
 db.on('error', console.error.bind(console, 'connection error')); //error
@@ -39,7 +42,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../Client')));
 app.use(express.static(path.join(__dirname, "../../node_modules")));
 
+//Routing happens now
 app.use('/', indexRouter);
+app.use('/clothing-list', clothingRouter); //defines new area of our site
+app.use('/contact-list', contactRouter ); // defines contact list page for our site
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

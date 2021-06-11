@@ -8,37 +8,25 @@ import express from 'express';
 const router = express.Router();
 export default router;
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home', page: 'home'});
-});
-/*Get Home Page*/
-router.get('/home', function (req, res, next)
-{
-  res.render('index', {title: "Home", page: 'home'});
-});
-/*Get About Page*/
-router.get('/about', function (req, res, next)
-{
-  res.render('index', {title: "About Us", page: 'about'});
-});
-/*Get Project Page*/
-router.get('/projects', function (req, res, next)
-{
-  res.render('index', {title: "Our Projects", page: 'projects'});
-});
-/*Get Services Page*/
-router.get('/services', function (req, res, next)
-{
-  res.render('index', {title: "Our Services", page: 'services'});
-});
-/*Get Contact Page*/
-router.get('/contact', function (req, res, next)
-{
-  res.render('contactus', {title: "Contact Us", page: 'contact'});
-});
+//create index controller instance
+import {DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayProjectsPage, DisplayServicesPage, DisplaySignInPage} from'../Controllers/index';
 
-router.get('/signin', function(req, res, next)
-{
-  res.render('index', {title: "Sign In", page: "signin"});
-});
+/* GET home page. */
+router.get('/', DisplayHomePage);
+
+/*Get Home Page*/
+router.get('/home', DisplayHomePage);
+
+/*Get About Page*/
+router.get('/about', DisplayAboutPage);
+
+/*Get Project Page*/
+router.get('/projects', DisplayProjectsPage);
+
+/*Get Services Page*/
+router.get('/services', DisplayServicesPage);
+
+/*Get Contact Page*/
+router.get('/contact', DisplayContactPage);
+
+router.get('/signin', DisplaySignInPage);
