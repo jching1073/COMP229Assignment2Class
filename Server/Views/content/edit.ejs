@@ -1,0 +1,30 @@
+<div class="row justify-content-lg-center g-3">
+    <h1><%= title %> Contact  List </h1>
+
+    <form method="POST" class="col-lg-6 col-med-10 col-sm-10">
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="FirstName">First Name</span>
+            <input type="text" class="form-control" placeholder="FirstName" aria-label="FirstName" 
+            aria-describedby="item FirstName" id="FirstName" name:"FirstName" value="<%= item.FirstName %>" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="LastName">Last Name</span>
+            <input type="text" class="form-control" placeholder="Last Name" aria-label="LastName" 
+            aria-describedby="item LastName" id="LastName" name:"LastName" value="<%= item.LastName %>" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="Email">E-mail</span>
+            <input type="text" class="form-control" placeholder="Email" aria-label="Email" 
+            aria-describedby="Email" id="Email" name:"Email" value="<%= item.Email %>" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="ContactNumber">Contact Number</span>
+            <input type="text" class="form-control" placeholder="ContactNumber" aria-label="ContactNumber" 
+            aria-describedby="Contact Number" id="ContactNumber" name:"ContactNumber" value="<%= item.ContactNumber %>" required>
+        </div>
+        <button type="submit" class="btn.btn-primary" id="editButton"><i class="fas fa-edit fa-gl"></i> Edit</button>
+
+    </form>
+</div>

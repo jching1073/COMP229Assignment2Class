@@ -13,6 +13,6 @@ const ContactSchema = new Schema({
 }, {
     collection: "contacts"
 });
-const Model = mongoose_1.default.model("Contact", ContactSchema);
+const Model = mongoose_1.default.model("Contacts", ContactSchema);
 exports.default = Model;
 //# sourceMappingURL=contact.js.map
