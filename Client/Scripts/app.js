@@ -1,5 +1,13 @@
 "use strict";
 (function () {
+    function ConfirmDelete() {
+        $("a.delete").on("click", function (event) {
+            if (!confirm("Are you sure you want to delete?")) {
+                event.preventDefault();
+                location.href = 'contact-list';
+            }
+        });
+    }
     let submitButton = document.getElementById("submitForm");
     let resetButton = document.getElementById("clear");
     if (submitButton) {
