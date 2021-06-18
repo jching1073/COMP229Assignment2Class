@@ -6,7 +6,7 @@ const UserSchema = new Schema
 ({
     username: String,
     emailAddress: String,
-    desplayName: String,
+    displayName: String,
     created:
     {
         type: Date,
@@ -22,7 +22,7 @@ const UserSchema = new Schema
       collection: "users"
 });
 UserSchema.plugin(passportLocalMongoose);
-const Model = mongoose.model("Contacts", UserSchema as PassportLocalSchema);
+const Model = mongoose.model("User", UserSchema as PassportLocalSchema);
 
 declare global
 {

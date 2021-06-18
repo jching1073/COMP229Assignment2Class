@@ -2,6 +2,9 @@ import express, { Request, Response, NextFunction} from 'express'; //only import
 
 import Contact from '../Model/contact';
 
+//import util functions
+import {UserDisplayName} from '../Util';
+
 export function DisplayContactListPage(req: Request, res: Response, next: NextFunction) : void
 {
     Contact.find(function(err, contactCollection)
@@ -12,7 +15,7 @@ export function DisplayContactListPage(req: Request, res: Response, next: NextFu
             res.end(err);
         }
         //render contact les partial page
-        res.render('index', {title: 'Contact List', page: 'contact-list', contact: contactCollection});
+        res.render('index', {title: 'Contact List', page: 'contact-list', contact: contactCollection, displayName: UserDisplayName(req)});
     });
 }
 export function DisplayEditPage (req: Request, res: Response, next: NextFunction) : void
@@ -32,13 +35,13 @@ export function DisplayEditPage (req: Request, res: Response, next: NextFunction
             res.end(err);
         }
         //show the edit view
-        res.render('index', {title: 'Edit', page: 'edit', item: contactToEdit});
+        res.render('index', {title: 'Edit', page: 'edit', item: contactToEdit, displayName: UserDisplayName(req)});
     });
 }
 
 export function DisplayAddPage (req: Request, res: Response, next: NextFunction) : void
 {
-    res.render('index', {title: 'Add', page: 'edit', item: ''}); 
+    res.render('index', {title: 'Add', page: 'edit', item: '', displayName: UserDisplayName(req)}); 
 }
 
 export function ProcessEditPage (req: Request, res: Response, next: NextFunction) : void
@@ -90,8 +93,7 @@ export function ProcessAddPage(req: Request, res: Response, next: NextFunction):
 export function ProcessDeletePage(req: Request, res: Response, next: NextFunction): void
 {
     let id = req.params.id;
-
-  // db.clothing.remove({"_id: id"})
+  
   Contact.remove({_id: id}, (err) => {
     if(err)
     {

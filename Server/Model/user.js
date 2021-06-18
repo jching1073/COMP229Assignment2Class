@@ -9,7 +9,7 @@ const passport_local_mongoose_1 = __importDefault(require("passport-local-mongoo
 const UserSchema = new Schema({
     username: String,
     emailAddress: String,
-    desplayName: String,
+    displayName: String,
     created: {
         type: Date,
         default: Date.now()
@@ -22,6 +22,6 @@ const UserSchema = new Schema({
     collection: "users"
 });
 UserSchema.plugin(passport_local_mongoose_1.default);
-const Model = mongoose_1.default.model("Contacts", UserSchema);
+const Model = mongoose_1.default.model("User", UserSchema);
 exports.default = Model;
 //# sourceMappingURL=user.js.map
