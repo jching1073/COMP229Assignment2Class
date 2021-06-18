@@ -3,15 +3,20 @@
     <div class="col">
         <table class="table">
             <thead>
+             <% if(displayName) { %>
               <a href="/contact-list/add" class="btn btn-primary editBTN">Add</a>
+              <% } %>
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Contact Number</th>
+
+                <% if(displayName) { %>
                 <th></th>
                 <th></th>
+                <% } %>
 
               </tr>
             </thead>
@@ -25,8 +30,10 @@
                 <td><%= contact[count].LastName %></td>
                 <td><%= contact[count].Email %></td>
                 <td><%= contact[count].ContactNumber %></td>
+                <% if(displayName) { %>
                 <td class="text-center"><a href="/contact-list/edit/<%= contact[count].id %>" class="btn btn-primary editBTN">Edit</a> </td>
                 <td class="text-center"><a href="/contact-list/delete/<%= contact[count].id %>" class="btn btn-primary delete">Delete</a></td>
+                <% } %>
               </tr>
               <% } %>
             </tbody>
