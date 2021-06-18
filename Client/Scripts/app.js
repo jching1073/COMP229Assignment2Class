@@ -1,10 +1,11 @@
 "use strict";
 (function () {
     function ConfirmDelete() {
+        console.log("ConfirmDelete being called");
         $("a.delete").on("click", function (event) {
             if (!confirm("Are you sure you want to delete?")) {
                 event.preventDefault();
-                location.href = 'contact-list';
+                location.href = '/contact-list';
             }
         });
     }
@@ -37,6 +38,7 @@
     }
     function Start() {
         console.log("App Started");
+        ConfirmDelete();
     }
     window.addEventListener("load", Start);
 })();

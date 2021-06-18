@@ -9,11 +9,12 @@ Date: June 4, 2021
 {
     function ConfirmDelete()
     {
+        console.log("ConfirmDelete being called");
         $("a.delete").on("click", function(event){
             if(!confirm("Are you sure you want to delete?"))
             {
                 event.preventDefault();
-                location.href = 'contact-list';
+                location.href = '/contact-list';
             }
         });
     }
@@ -60,6 +61,7 @@ Date: June 4, 2021
     function Start(): void
     {
         console.log("App Started");
+        ConfirmDelete();
     }
 
     window.addEventListener("load", Start);
