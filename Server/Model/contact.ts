@@ -1,3 +1,9 @@
+/*
+File Name contact.ts
+By: Jerome Ching
+Student# 300817930
+Date: June 18, 2021
+*/
 import mongoose from "mongoose";
 const Schema = mongoose.Schema; // poiner to mongoose.Schema
 const ContactSchema = new Schema

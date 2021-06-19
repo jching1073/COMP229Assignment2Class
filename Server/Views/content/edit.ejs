@@ -1,3 +1,9 @@
+<!--
+File Name edit.ejs
+By: Jerome Ching
+Student# 300817930
+Date: June 18, 2021
+-->
 <br><br><br>
 
 <div class="row justify-content-lg-center g-3 border border-dark">
@@ -26,7 +32,7 @@
             <input type="text" class="form-control" placeholder="ContactNumber" aria-label="ContactNumber" 
             aria-describedby="Contact Number" id="ContactNumber" name="ContactNumber" value="<%= item.ContactNumber %>" required>
         </div>
-        <button type="submit" class="btn btn-primary" id="editButton"><i class="fas fa-retweet fa=lg"></i> Edit</button>
+        <button type="submit" class="btn btn-primary" id="editButton"><i class="fas fa-retweet fa=lg"></i> <%=title%></button>
         <a href="/contact-list" class="btn btn-warning"><i class="fas fa-window-close fa-lg"></i>Cancel</a>
         <a href="/contact-list/delete/<%=item._id%>" class="btn btn-danger delete"><i class="fas fa-minus-square fa-lg"></i> Delete</a>
         <br><br><br>

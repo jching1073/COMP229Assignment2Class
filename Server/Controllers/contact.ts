@@ -1,3 +1,9 @@
+/*
+File Name contact.ts
+By: Jerome Ching
+Student# 300817930
+Date: June 18, 2021
+*/
 import express, { Request, Response, NextFunction} from 'express'; //only import parts of express
 
 import Contact from '../Model/contact';

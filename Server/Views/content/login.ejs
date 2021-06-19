@@ -1,3 +1,9 @@
+<!--
+File Name login.ejs
+By: Jerome Ching
+Student# 300817930
+Date: June 18, 2021
+-->
 <div class="row">
     <div class="offset-md-3 col-md-6 col-sm-12">
     <br><br><br><br><br>
@@ -12,31 +18,20 @@
               <% } %>
               <div class="">
               <form id="loginForm" novalidate method="POST">
-                <div class="form-group">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="fa fa-user">
-                      </i>
-                    </span>
-                    <input type="text" class="form-control" id="username" name="username"  required
-                    value="" placeholder="Enter your username">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="fa fa-lock">
-                      </i>
-                    </span>
-                    <input type="password" class="form-control" id="password" name="password"  required
-                    value="" placeholder="Enter your password">
-                  </div>
-                 
-                </div>                                        
+                <div class="input-group mb-3">
+            <span class="input-group-text" id="username"><i class="fa fa-user"></i>  User Name</span>
+            <input type="text" class="form-control" placeholder="Enter your username" aria-label="FirstName" 
+            aria-describedby="item usename" id="username" name="username" value="" required>
+        </div>
+                <div class="input-group mb-3">
+            <span class="input-group-text" id="username"><i class="fa fa-lock"></i>  Password</span>
+            <input type="password" class="form-control" placeholder="Enter your Password" aria-label="FirstName" 
+            aria-describedby="item usename" id="password" name="password" value="" required>
+        </div>
+                                                       
                 <div class="text-end mt-2">
                   <button id="loginButton" type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</button>
-                  <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fas fa-undo"></i> Cancel</button>
+        <a href="/contact-list" class="btn btn-warning"><i class="fas fa-window-close fa-lg"></i>Cancel</a>
                 </div>
               </form>
              </div>

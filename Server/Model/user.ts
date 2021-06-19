@@ -1,3 +1,9 @@
+/*
+File Name user.ts
+By: Jerome Ching
+Student# 300817930
+Date: June 18, 2021
+*/
 import mongoose, { PassportLocalSchema } from "mongoose";
 const Schema = mongoose.Schema; // poiner to mongoose.Schema
 import passportLocalMongoose from "passport-local-mongoose";
