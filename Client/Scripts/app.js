@@ -1,5 +1,9 @@
 "use strict";
 (function () {
+    function parseURL() {
+        let lastPart = URL.toString;
+        console.log(lastPart);
+    }
     function ConfirmDelete() {
         console.log("ConfirmDelete being called");
         $("a.delete").on("click", function (event) {
@@ -38,6 +42,7 @@
     }
     function Start() {
         console.log("App Started");
+        parseURL();
         ConfirmDelete();
     }
     window.addEventListener("load", Start);

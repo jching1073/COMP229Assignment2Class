@@ -1,8 +1,10 @@
-<div class="row justify-content-lg-center g-3">
-    <h1><%= title %> Contact  List </h1>
+<br><br><br>
+
+<div class="row justify-content-lg-center g-3 border border-dark">
+    <h1 class="text-center"><%= title %> Contact  List </h1>
 
     <form method="POST" class="col-lg-6 col-med-10 col-sm-10">
-
+        
         <div class="input-group mb-3">
             <span class="input-group-text" id="FirstName">First Name</span>
             <input type="text" class="form-control" placeholder="FirstName" aria-label="FirstName" 
@@ -24,7 +26,11 @@
             <input type="text" class="form-control" placeholder="ContactNumber" aria-label="ContactNumber" 
             aria-describedby="Contact Number" id="ContactNumber" name="ContactNumber" value="<%= item.ContactNumber %>" required>
         </div>
-        <button type="submit" class="btn.btn-primary" id="editButton"><i class="fas fa-edit fa-gl"></i> Edit</button>
+        <button type="submit" class="btn btn-primary" id="editButton"><i class="fas fa-retweet fa=lg"></i> Edit</button>
+        <a href="/contact-list" class="btn btn-warning"><i class="fas fa-window-close fa-lg"></i>Cancel</a>
+        <a href="/contact-list/delete/<%=item._id%>" class="btn btn-danger delete"><i class="fas fa-minus-square fa-lg"></i> Delete</a>
+        <br><br><br>
+        
 
     </form>
 </div>

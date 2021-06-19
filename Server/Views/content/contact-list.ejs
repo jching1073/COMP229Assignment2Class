@@ -1,10 +1,11 @@
-<h1>Contact List</h1>
+<h1 class="text-center">Busness Contact List</h1>
 <div class="row">
     <div class="col">
-        <table class="table">
+        <table class="table border border-dark">
             <thead>
              <% if(displayName) { %>
-              <a href="/contact-list/add" class="btn btn-primary editBTN">Add</a>
+              <a href="/contact-list/add" class="btn btn-primary editBTN"><i class="fas fa-plus-square fa-lg"></i> Add</a>
+              <br><br>
               <% } %>
               <tr>
                 <th scope="col">#</th>
@@ -31,8 +32,8 @@
                 <td><%= contact[count].Email %></td>
                 <td><%= contact[count].ContactNumber %></td>
                 <% if(displayName) { %>
-                <td class="text-center"><a href="/contact-list/edit/<%= contact[count].id %>" class="btn btn-primary editBTN">Edit</a> </td>
-                <td class="text-center"><a href="/contact-list/delete/<%= contact[count].id %>" class="btn btn-primary delete">Delete</a></td>
+                <td class="text-center"><a href="/contact-list/edit/<%= contact[count].id %>" class="btn btn-warning editBTN"><i class="fas fa-retweet fa=lg"></i> Edit</a> </td>
+                <td class="text-center"><a href="/contact-list/delete/<%= contact[count].id %>" class="btn btn-danger delete"><i class="fas fa-minus-square fa-lg"></i> Delete</a></td>
                 <% } %>
               </tr>
               <% } %>

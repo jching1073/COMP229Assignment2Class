@@ -7,6 +7,11 @@ Date: June 4, 2021
 */
 (function()
 {
+    function parseURL()
+    {
+        let lastPart = URL.toString;
+        console.log(lastPart);
+    }
     function ConfirmDelete()
     {
         console.log("ConfirmDelete being called");
@@ -61,6 +66,7 @@ Date: June 4, 2021
     function Start(): void
     {
         console.log("App Started");
+        parseURL();
         ConfirmDelete();
     }
 

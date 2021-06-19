@@ -62,3 +62,10 @@ Date: June 4, 2021
 {
   display:inline-block;
 }
+
+.marginAuto
+{
+  margin: auto;
+  padding: auto;
+  border: 30px;
+}
