@@ -16,7 +16,7 @@ export function DisplayContactListPage(req: Request, res: Response, next: NextFu
         }
         //render contact les partial page
         res.render('index', {title: 'Contact List', page: 'contact-list', contact: contactCollection, displayName: UserDisplayName(req)});
-    });
+    }).sort({FirstName: 1});
 }
 export function DisplayEditPage (req: Request, res: Response, next: NextFunction) : void
 {
